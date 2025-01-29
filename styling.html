@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling with JavaScript</title>
+    <script src="styling.js" defer></script>
+    <style>
+        h2 {
+            font-size: 20px;
+        }
+        #box {
+            font-size: 24px;
+            padding: 5px;
+        }
+        .highlighted {
+            background-color: rgb(255, 0, 144);
+            color: white;
+        }
+
+        #buttonHover {
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        #imageContainer {
+            padding: 15px;
+            margin: 15 px;
+        }
+
+        .glowEffect {
+            color: rgba(255, 255, 255, .7);
+            box-shadow: 0 5px 15px rgba(86, 47, 114, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create at least 5 elements to by styled dynamically -->
+    <h2>Click below to see a color appear: </h2>
+    <div id="box" onclick="changeColor()">Click me to change color!</div>
+    <hr>
+
+    <h2>Hover over over the button to see it glow:</h2>
+    <button id="buttonHover" onmouseover="glow()" onmouseout="noGlow()">Hover over me to see me glow!</button>
+    <hr>
+
+    <h2>Mouse on and off of the theater image to see it change:</h2>
+    <div id="imageContainer">
+        <img id="image" src="theater1.jpg" alt="Placeholder Image" onmouseover="changeImage()" onmouseout="changeImageBack()" style="width: 400px; height: auto;" >
+    </div>
+    <hr>
+
+    <h2>Click on the text below to see it change:</h2>
+    <h1 id="changeText" onclick="changeText()">Click to change me!</h1>
+    <hr>
+
+    <h2>Fill in the form forms and press submit for a greeting:</h2>
+    <form id="myForm" onsubmit="handleSubmit(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password">
+        <button type="submit">Submit</button>
+    </form>
+
+</body> 
+</html>
